@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 0px;
+  padding: 0px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5px;
+  height: 40px;
+  background: red;
+  cursor: pointer;
+}
+
+.box {
+    width: 100%;
+    height: 10%;
+    background: grey;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#fourpoints{
+    width: 10%;
+    height: 100%;
+    margin-left: 25%;
+    background: orange;
+    text-align:center; 
+    font-family: Arial;
+    vertical-align: middle;
+    font-size: 150%;
+}
+
+.points {
+    vertical-align: middle;
+}
+
+#leftword {
+    text-align: left;
+    width: 49%;
+    height:100%;
+    display: inline-block;
+    font-size: 100%;
+}
+
+#rightword {
+    text-align: right;
+    width: 50%;
+    height:100%;
+    display: inline-block;
+    font-size: 100%;
+}
+
+.spectrum {
+    height:10%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="spectrum">
+    <p id="leftword">Happy</p>
+    <p id="rightword">Sad</p>
+</div>
+
+<div class="box">
+    <div id="fourpoints">4</div>
+</div>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+
+</body>
+</html>
