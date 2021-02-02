@@ -37,6 +37,7 @@
     width: 100%;
     height: 10%;
     background: grey;
+    padding: 0;
 }
 
 html, body {
@@ -47,21 +48,36 @@ html, body {
 }
 
 #fourpoints{
-    width: 10%;
-    height: 100%;
-    margin-right: 0;
-    margin-left: 50%;
-    margin-top: 0;
-    margin-bottom: 0;
+    width: 10vw;
+    min-width: 10vw;
+    background: lightblue;
+    text-align:center; 
+    font-family: Arial;
+    vertical-align: middle;
+    font-size: 8.0vmin;
+    margin: 0;
+}
+
+#threepoints{
+    width: 10vw;
+    min-width: 10vw;
     background: orange;
     text-align:center; 
     font-family: Arial;
     vertical-align: middle;
     font-size: 8.0vmin;
+    margin: 0;
 }
 
-.points {
+#twopoints{
+    width: 10vw;
+    min-width: 10vw;
+    background: rgb(255, 251, 0);
+    text-align:center; 
+    font-family: Arial;
     vertical-align: middle;
+    font-size: 8.0vmin;
+    margin: 0;
 }
 
 #leftword {
@@ -69,7 +85,7 @@ html, body {
     width: 49%;
     height:100%;
     font-size: 8.0vmin;
-    margin: 0;
+    margin: 0px;
     font-family: Arial;
 }
 
@@ -82,24 +98,40 @@ html, body {
     font-family: Arial
 }
 
-.spectrum {
+.words {
     padding: 0.5vmin;
     height:10%;
     display: flex;
-    flex: space-around;
+}
+
+.spectrum {
+    margin-right: 0;
+    margin-left: -10.0vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    overflow: hidden;
 }
 
 </style>
 </head>
 <body>
 
-<div class="spectrum">
+<div class="words">
     <p id="leftword">Happy</p>
     <p id="rightword">Sad</p>
 </div>
 
 <div class="box">
-    <p id="fourpoints">4</p>
+    <div class="spectrum">
+        <p id="twopoints">2</p>
+        <p id="threepoints">3</p>
+        <p id="fourpoints">4</p>
+        <p id="threepoints">3</p>
+        <p id="twopoints">2</p>
+    </div>
+</div>
+
 </div>
 
 <div class="slidecontainer">
