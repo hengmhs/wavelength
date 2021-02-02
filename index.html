@@ -49,12 +49,15 @@ html, body {
 #fourpoints{
     width: 10%;
     height: 100%;
-    margin-left: 25%;
+    margin-right: 0;
+    margin-left: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
     background: orange;
     text-align:center; 
     font-family: Arial;
     vertical-align: middle;
-    font-size: 150%;
+    font-size: 8.0vmin;
 }
 
 .points {
@@ -65,20 +68,25 @@ html, body {
     text-align: left;
     width: 49%;
     height:100%;
-    display: inline-block;
-    font-size: 100%;
+    font-size: 8.0vmin;
+    margin: 0;
+    font-family: Arial;
 }
 
 #rightword {
     text-align: right;
     width: 50%;
     height:100%;
-    display: inline-block;
-    font-size: 100%;
+    font-size: 8.0vmin;
+    margin: 0;
+    font-family: Arial
 }
 
 .spectrum {
+    padding: 0.5vmin;
     height:10%;
+    display: flex;
+    flex: space-around;
 }
 
 </style>
@@ -91,7 +99,7 @@ html, body {
 </div>
 
 <div class="box">
-    <div id="fourpoints">4</div>
+    <p id="fourpoints">4</p>
 </div>
 
 <div class="slidecontainer">
