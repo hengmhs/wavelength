@@ -48,8 +48,8 @@ html, body {
 }
 
 #fourpoints{
-    width: 10vw;
-    min-width: 10vw;
+    width: 3vw;
+    min-width: 3vw;
     background: lightblue;
     text-align:center; 
     font-family: Arial;
@@ -59,8 +59,8 @@ html, body {
 }
 
 #threepoints{
-    width: 10vw;
-    min-width: 10vw;
+    width: 3vw;
+    min-width: 3vw;
     background: orange;
     text-align:center; 
     font-family: Arial;
@@ -70,8 +70,8 @@ html, body {
 }
 
 #twopoints{
-    width: 10vw;
-    min-width: 10vw;
+    width: 3vw;
+    min-width: 3vw;
     background: rgb(255, 251, 0);
     text-align:center; 
     font-family: Arial;
@@ -104,18 +104,26 @@ html, body {
     display: flex;
 }
 
-.spectrum {
+#spectrum {
     margin-right: 0;
-    margin-left: -10.0vw;
+    margin-left: -6.0vw;
     margin-top: 0;
     margin-bottom: 0;
     display: flex;
     overflow: hidden;
 }
 
+.controls {
+    margin-top: 2.0vw;
+    margin-bottom: 0;
+}
+
 </style>
 </head>
+
 <body>
+
+<!-- 91.0vw  is the max and -6.0vw is the minimum for the spectrum margin left -->
 
 <div class="words">
     <p id="leftword">Happy</p>
@@ -123,7 +131,7 @@ html, body {
 </div>
 
 <div class="box">
-    <div class="spectrum">
+    <div id="spectrum">
         <p id="twopoints">2</p>
         <p id="threepoints">3</p>
         <p id="fourpoints">4</p>
@@ -138,5 +146,26 @@ html, body {
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
 </div>
 
+<div class="controls">
+    <button onclick="hideSpectrum()">Toggle Display</button>
+</div>
+
+
 </body>
+
+<script>
+
+    function hideSpectrum() {
+        let spectrum = document.getElementById("spectrum");
+        if (spectrum.style.display === "none") {
+            spectrum.style.display = "flex";
+        } else {
+            spectrum.style.display = "none";
+        }
+    }
+    
+    
+</script>
+
+
 </html>
