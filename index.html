@@ -3,6 +3,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+html, button {
+    font-size: 8.0vmin;
+}
+
 .slidecontainer {
   width: 100%;
 }
@@ -127,7 +132,7 @@ html, body {
     display: flex;
     justify-content: space-around;
     font-family: Arial;
-    font-size: 4.0vmin;
+    font-size: 8.0vmin;
 }
 
 </style>
@@ -168,16 +173,16 @@ html, body {
 
 <div class="scores">
     <div>
-        <span>Team 1: </span>
-        <span>0</span>
-        <button>+</button>
-        <button>-</button>
+        <span>Team A: </span>
+        <span id="ACounter">0</span>
+        <button onclick="increment('ACounter')">+</button>
+        <button onclick="decrement('ACounter')">-</button>
     </div>
     <div>
-        <span>Team 2: </span>
-        <span>0</span>
-        <button>+</button>
-        <button>-</button>
+        <span>Team B: </span>
+        <span id="BCounter">0</span>
+        <button onclick="increment('BCounter')">+</button>
+        <button onclick="decrement('BCounter')">-</button>
     </div>
 </div>
 
@@ -214,6 +219,16 @@ function newCard() {
     rightword.innerHTML = chosenCard[1];
     cards.splice(randomCard, 1);
     randomPos();
+}
+
+function increment(counter){
+    let number = document.getElementById(counter);
+    number.innerHTML = parseInt(number.innerHTML) + 1;
+}
+
+function decrement(counter){
+    let number = document.getElementById(counter);
+    number.innerHTML = parseInt(number.innerHTML) - 1;
 }
     
     
